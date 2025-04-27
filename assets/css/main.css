@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@theme {
+    --font-sans: InterVariable, system-ui, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@layer utilities{
+    .stroke-gray-900\:10{
+        stroke: color-mix(in oklab, var(--color-gray-900) 10%, transparent);
+    }
+
+}
+  
+@source "hugo_stats.json";

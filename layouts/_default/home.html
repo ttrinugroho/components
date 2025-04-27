@@ -1,0 +1,1585 @@
+{{ define "main" }}
+{{ partial "header" . }}
+<main class="flex min-h-dvh flex-col pt-14">
+    <div class="grid flex-1 grid-rows-[1fr_auto] overflow-clip grid-cols-[1fr_var(--gutter-width)_minmax(0,var(--breakpoint-2xl))_var(--gutter-width)_1fr] [--gutter-width:--spacing(6)] lg:[--gutter-width:--spacing(10)]">
+        <div class="col-start-2 row-span-full row-start-1 max-sm:hidden text-gray-950/5 border-x border-x-current bg-[size:10px_10px] bg-fixed bg-[image:repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,_transparent_0,_transparent_50%)]">
+        </div>
+        <div class="col-start-4 row-span-full row-start-1 max-sm:hidden text-gray-950/5 border-x border-x-current bg-[size:10px_10px] bg-fixed bg-[image:repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,_transparent_0,_transparent_50%)]">
+        </div>
+        <div class="col-start-3 row-start-1 max-sm:col-span-full max-sm:col-start-1">
+            <div class="line-b">
+                <div class="grid grid-cols-1 gap-10 xl:grid-cols-2">
+                    <div class="relative pt-12 sm:pt-20 xl:border-r xl:border-gray-950/5 xl:py-40">
+                        <div class="max-xl:line-y xl:line-y/half px-2 py-2 max-sm:px-4">
+                            <p class="sm:hidden font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600">
+                                By the makers of Tailwind CSS</p>
+                            <p class="max-sm:hidden font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600">
+                                UI Blocks by the makers of Tailwind CSS</p>
+                            <h1 class="mt-2 max-w-3xl text-5xl tracking-tight sm:text-6xl text-pretty">Beautiful UI
+                                components, crafted with Tailwind CSS.</h1>
+                        </div>
+                        <div class="max-xl:line-y xl:line-y/half mt-5 px-2 py-2 max-sm:px-4">
+                            <div class="flex flex-wrap gap-10">
+                                <div class="flex items-center gap-3 text-sm/6 font-semibold text-gray-950"><svg
+                                        class="size-8 flex-none stroke-current text-gray-400" fill="none">
+                                        <path d="M5 4.15h22.5l-2 20.5-9.25 4-9.25-4-2-20.5Z"></path>
+                                        <path d="M20.5 9.15H12v5.5h8.5v6l-4.25 2-4.25-2v-2.5"></path>
+                                    </svg>HTML</div>
+                                <div class="flex items-center gap-3 text-sm/6 font-semibold text-gray-950"><svg
+                                        class="size-8 flex-none stroke-current text-gray-400" fill="none">
+                                        <ellipse cx="16" cy="16" rx="13" ry="5"></ellipse>
+                                        <ellipse cx="16" cy="16" rx="13" ry="5" transform="rotate(60 16 16)"></ellipse>
+                                        <ellipse rx="13" ry="5" transform="matrix(-.5 .86603 .86603 .5 16 16)">
+                                        </ellipse>
+                                        <circle cx="16" cy="16" r="2"></circle>
+                                    </svg>React</div>
+                                <div class="flex items-center gap-3 text-sm/6 font-semibold text-gray-950"><svg
+                                        class="size-8 flex-none stroke-current text-gray-400" fill="none">
+                                        <path d="M19.924 5 16 11.644 12.075 5H3l13 23L29 5h-9.076Z"></path>
+                                        <path d="M19.879 5 16 11.26 12.121 5H8l8 13 8-13h-4.121Z"></path>
+                                    </svg>Vue</div>
+                            </div>
+                        </div>
+                        <div class="max-xl:line-y xl:line-y/half mt-5 px-2 py-2 max-sm:px-4">
+                            <p class="max-w-2xl text-lg/7 font-medium text-pretty text-gray-600">Over 500+
+                                professionally designed, fully responsive, expertly crafted component examples you can
+                                drop into your Tailwind projects and customize to your heart’s content.</p>
+                        </div>
+                        <div
+                            class="max-xl:line-y xl:line-y/half mt-8 flex gap-4 px-2 py-2 max-sm:flex-col max-sm:gap-2 max-sm:px-4">
+                            <a class="gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-950 px-4 py-2"
+                                href="/plus/ui-blocks/preview">Live preview<svg fill="currentColor" aria-hidden="true"
+                                    viewBox="0 0 10 10" class="-mr-0.5 w-2.5">
+                                    <path
+                                        d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z">
+                                    </path>
+                                </svg></a><a
+                                class="inline-flex justify-center rounded-full text-sm/6 font-semibold text-gray-950 ring-1 ring-gray-950/10 hover:ring-gray-950/20 px-4 py-2"
+                                href="/plus/ui-blocks/documentation">Documentation</a></div>
+                    </div>
+                    <div class="max-xl:line-t relative max-xl:h-84">
+                        <div
+                            class="absolute inset-0 -mx-px bg-gray-950/5 py-2 pr-[calc(--spacing(2)+1px)] pl-2 xl:border-l xl:border-gray-950/5">
+                            <div
+                                class="overflow-hidden rounded-2xl bg-gray-50 outline outline-gray-950/5 [--right:45%] flex size-full items-center justify-center">
+                                <div class="size-430 shrink-0 scale-50 sm:scale-75 lg:scale-100">
+                                    <div
+                                        class="relative top-(--top,30%) right-(--right,54%) grid size-full origin-top-left rotate-x-55 rotate-y-0 -rotate-z-45 grid-cols-4 gap-8 transform-3d">
+                                        <div class="flex flex-col gap-8" style="transform: translateY(750px);"><img
+                                                src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-1-row-1.png"
+                                                class="aspect-[970/580] ring ring-gray-950/5" width="970" height="580"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-1-row-2.png"
+                                                class="aspect-[971/582] ring ring-gray-950/5" width="971" height="582"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-1-row-3.png"
+                                                class="aspect-[971/820] ring ring-gray-950/5" width="971" height="820"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-1-row-4.png"
+                                                class="aspect-[970/508] ring ring-gray-950/5" width="970" height="508"
+                                                alt=""></div>
+                                        <div class="flex flex-col gap-8" style="transform: translateY(750px);"><img
+                                                src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-2-row-1.png"
+                                                class="aspect-[970/436] ring ring-gray-950/5" width="970" height="436"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-2-row-2.png"
+                                                class="aspect-[970/700] ring ring-gray-950/5" width="970" height="700"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-2-row-3.png"
+                                                class="aspect-[971/879] ring ring-gray-950/5" width="971" height="879"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-2-row-4.png"
+                                                class="aspect-[970/557] ring ring-gray-950/5" width="970" height="557"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-2-row-5.png"
+                                                class="aspect-[970/763] ring ring-gray-950/5" width="970" height="763"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-2-row-6.png"
+                                                class="aspect-[970/922] ring ring-gray-950/5" width="970" height="922"
+                                                alt=""></div>
+                                        <div class="flex flex-col gap-8" style="transform: translateY(750px);"><img
+                                                src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-3-row-1.png"
+                                                class="aspect-[970/580] ring ring-gray-950/5" width="970" height="580"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-3-row-2.png"
+                                                class="aspect-[971/395] ring ring-gray-950/5" width="971" height="395"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-3-row-3.png"
+                                                class="aspect-[971/349] ring ring-gray-950/5" width="971" height="349"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-3-row-4.png"
+                                                class="aspect-[970/975] ring ring-gray-950/5" width="970" height="975"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-3-row-5.png"
+                                                class="aspect-[970/381] ring ring-gray-950/5" width="970" height="381"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-3-row-6.png"
+                                                class="aspect-[970/782] ring ring-gray-950/5" width="970" height="782"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-3-row-7.png"
+                                                class="aspect-[970/426] ring ring-gray-950/5" width="970" height="426"
+                                                alt=""></div>
+                                        <div class="flex flex-col gap-8" style="transform: translateY(1400px);"><img
+                                                src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-4-row-1.png"
+                                                class="aspect-[970/600] ring ring-gray-950/5" width="970" height="600"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-4-row-2.png"
+                                                class="aspect-[972/854] ring ring-gray-950/5" width="972" height="854"
+                                                alt=""><img src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-4-row-3.png"
+                                                class="aspect-[971/725] ring ring-gray-950/5" width="971" height="725"
+                                                alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="sticky top-14 z-10 bg-white">
+                <div class="flex overflow-x-auto border-b border-gray-950/5"><a
+                        class="border-r border-gray-950/5 px-4 py-3 hover:bg-gray-950/2 focus-visible:outline-2 focus-visible:-outline-offset-2 sm:px-6"
+                        href="#product-marketing"><span
+                            class="whitespace-nowrap font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase">Marketing</span></a><a
+                        class="border-r border-gray-950/5 px-4 py-3 hover:bg-gray-950/2 focus-visible:outline-2 focus-visible:-outline-offset-2 sm:px-6"
+                        href="#product-application-ui"><span
+                            class="whitespace-nowrap font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase">Application
+                            UI</span></a><a
+                        class="border-r border-gray-950/5 px-4 py-3 hover:bg-gray-950/2 focus-visible:outline-2 focus-visible:-outline-offset-2 sm:px-6"
+                        href="#product-ecommerce"><span
+                            class="whitespace-nowrap font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase">Ecommerce</span></a><a
+                        class="border-gray-950/5 px-4 py-3 hover:bg-gray-950/2 focus-visible:outline-2 focus-visible:-outline-offset-2 max-sm:border-r sm:ml-auto sm:border-l sm:px-6"
+                        href="#pricing"><span
+                            class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase">Pricing</span></a>
+                </div>
+            </nav>
+            <section class="isolate mt-24" id="product-marketing">
+                <div class="line-y px-4 py-2">
+                    <h2 class="text-xl/8 font-semibold tracking-tight">Marketing</h2>
+                    <p class="mt-4 max-w-2xl text-base/7 text-gray-600">Heroes, feature sections, newsletter sign up
+                        forms — everything you need to build beautiful marketing websites.</p>
+                </div>
+                <div class="relative">
+                    <div
+                        class="pointer-events-none absolute inset-0 z-10 grid grid-cols-1 gap-10 max-sm:hidden sm:grid-cols-2 sm:max-md:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+                        <div class="border-r border-gray-950/5"></div>
+                        <div class="border-l border-gray-950/5 lg:border-x"></div>
+                        <div class="border-l border-gray-950/5 max-lg:hidden xl:border-x"></div>
+                        <div class="border-l border-gray-950/5 max-xl:hidden"></div>
+                    </div>
+                    <section class="relative mt-12" id="product-marketing-sections">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Page Sections</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/heros">
+                                    <div class="relative p-2"><img src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/heroes.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Hero Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">12 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/feature-sections">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/feature-sections.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Feature Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">20 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/cta-sections">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/cta-sections.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">CTA Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">11 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/bento-grids">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/bento-grids.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Bento Grids</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">3 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/pricing">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/pricing.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Pricing Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">14 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/header">
+                                    <div class="relative p-2"><img src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/header.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Header Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">10 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/newsletter-sections">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/newsletter-sections.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Newsletter Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">7 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/stats-sections">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/stats-sections.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Stats</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">10 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/testimonials">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/testimonials.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Testimonials</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">9 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/blog-sections">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/blog-sections.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Blog Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">7 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/contact-sections">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/contact-sections.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Contact Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">8 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/team-sections">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/team-sections.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Team Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">9 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/content-sections">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/content-sections.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Content Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">7 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/logo-clouds">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/logo-clouds.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Logo Clouds</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">12 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/faq-sections">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/faq-sections.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">FAQs</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">10 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/sections/footers">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/footers.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Footers</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">14 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-marketing-elements">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Elements</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/elements/headers">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/headers.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Headers</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">12 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/elements/flyout-menus">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/flyout-menus.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Flyout Menus</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">7 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/elements/banners">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/banners.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Banners</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">13 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-marketing-feedback">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Feedback</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/feedback/404-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/404-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">404 Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-marketing-page-examples">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Page Examples</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/page-examples/landing-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/landing-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Landing Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">4 examples</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/page-examples/pricing-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/pricing-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Pricing Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">3 examples</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/marketing/page-examples/about-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/marketing/about-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">About Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">3 examples</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+            <section class="isolate mt-24" id="product-application-ui">
+                <div class="line-y px-4 py-2">
+                    <h2 class="text-xl/8 font-semibold tracking-tight">Application UI</h2>
+                    <p class="mt-4 max-w-2xl text-base/7 text-gray-600">Form layouts, tables, modal dialogs — everything
+                        you need to build beautiful responsive web applications.</p>
+                </div>
+                <div class="relative">
+                    <div
+                        class="pointer-events-none absolute inset-0 z-10 grid grid-cols-1 gap-10 max-sm:hidden sm:grid-cols-2 sm:max-md:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+                        <div class="border-r border-gray-950/5"></div>
+                        <div class="border-l border-gray-950/5 lg:border-x"></div>
+                        <div class="border-l border-gray-950/5 max-lg:hidden xl:border-x"></div>
+                        <div class="border-l border-gray-950/5 max-xl:hidden"></div>
+                    </div>
+                    <section class="relative mt-12" id="product-application-ui-application-shells">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Application Shells</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/application-shells/stacked">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/stacked.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Stacked Layouts</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">9 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/application-shells/sidebar">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/sidebar.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Sidebar Layouts</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">8 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/application-shells/multi-column">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/multi-column.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Multi-Column Layouts</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">6 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-application-ui-headings">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Headings</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/headings/page-headings">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/page-headings.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Page Headings</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">13 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/headings/card-headings">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/card-headings.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Card Headings</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">6 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/headings/section-headings">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/section-headings.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Section Headings</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">10 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-application-ui-data-display">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Data Display</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/data-display/description-lists">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/description-lists.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Description Lists</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">7 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/data-display/stats">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/stats.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Stats</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/data-display/calendars">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/calendars.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Calendars</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">8 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-application-ui-lists">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Lists</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/lists/stacked-lists">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/stacked-lists.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Stacked Lists</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">17 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/lists/tables">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/tables.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Tables</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">20 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/lists/grid-lists">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/grid-lists.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Grid Lists</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">7 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/lists/feeds">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/feeds.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Feeds</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">3 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-application-ui-forms">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Forms</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/forms/form-layouts">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/form-layouts.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Form Layouts</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/forms/input-groups">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/input-groups.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Input Groups</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">21 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/forms/select-menus">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/select-menus.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Select Menus</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">7 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/forms/sign-in-forms">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/sign-in-forms.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Sign-in and Registration</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/forms/textareas">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/textareas.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Textareas</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/forms/radio-groups">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/radio-groups.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Radio Groups</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">12 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/forms/checkboxes">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/checkboxes.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Checkboxes</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">4 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/forms/toggles">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/toggles.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Toggles</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/forms/action-panels">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/action-panels.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Action Panels</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">8 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/forms/comboboxes">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/comboboxes.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Comboboxes</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-application-ui-feedback">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Feedback</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/feedback/alerts">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/alerts.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Alerts</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">6 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/feedback/empty-states">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/empty-states.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Empty States</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">6 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-application-ui-navigation">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Navigation</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/navigation/navbars">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/navbars.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Navbars</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">11 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/navigation/pagination">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/pagination.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Pagination</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">3 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/navigation/tabs">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/tabs.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Tabs</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">9 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/navigation/vertical-navigation">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/vertical-navigation.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Vertical Navigation</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">6 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/navigation/sidebar-navigation">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/sidebar-navigation.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Sidebar Navigation</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/navigation/breadcrumbs">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/breadcrumbs.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Breadcrumbs</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">4 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/navigation/progress-bars">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/progress-bars.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Progress Bars</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">8 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/navigation/command-palettes">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/command-palettes.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Command Palettes</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">9 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-application-ui-overlays">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Overlays</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/overlays/modals">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/modal-dialogs.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Modal Dialogs</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">6 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/overlays/slide-overs">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/drawers.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Drawers</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">12 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/overlays/notifications">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/notifications.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Notifications</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">6 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-application-ui-elements">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Elements</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/elements/avatars">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/avatars.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Avatars</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">11 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/elements/badges">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/badges.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Badges</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">18 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/elements/dropdowns">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/dropdowns.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Dropdowns</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/elements/buttons">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/buttons.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Buttons</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">10 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/elements/button-groups">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/button-groups.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Button Groups</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-application-ui-layout">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Layout</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/layout/containers">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/containers.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Containers</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/layout/cards">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/cards.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Cards</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">10 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/layout/list-containers">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/list-containers.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">List containers</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">7 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/layout/media-objects">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/media-objects.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Media Objects</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">8 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/layout/dividers">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/dividers.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Dividers</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">8 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-application-ui-page-examples">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Page Examples</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/page-examples/home-screens">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/home-screens.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Home Screens</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">2 examples</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/page-examples/detail-screens">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/detail-screens.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Detail Screens</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">2 examples</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/application-ui/page-examples/settings-screens">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/application-ui/settings-screens.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Settings Screens</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">2 examples</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+            <section class="isolate mt-24" id="product-ecommerce">
+                <div class="line-y px-4 py-2">
+                    <h2 class="text-xl/8 font-semibold tracking-tight">Ecommerce</h2>
+                    <p class="mt-4 max-w-2xl text-base/7 text-gray-600">Checkout forms, shopping carts, product views —
+                        everything you need to build your next ecommerce front-end.</p>
+                </div>
+                <div class="relative">
+                    <div
+                        class="pointer-events-none absolute inset-0 z-10 grid grid-cols-1 gap-10 max-sm:hidden sm:grid-cols-2 sm:max-md:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+                        <div class="border-r border-gray-950/5"></div>
+                        <div class="border-l border-gray-950/5 lg:border-x"></div>
+                        <div class="border-l border-gray-950/5 max-lg:hidden xl:border-x"></div>
+                        <div class="border-l border-gray-950/5 max-xl:hidden"></div>
+                    </div>
+                    <section class="relative mt-12" id="product-ecommerce-components">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Components</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/product-overviews">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/product-overviews.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Product Overviews</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/product-lists">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/product-lists.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Product Lists</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">11 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/category-previews">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/category-previews.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Category Previews</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">6 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/shopping-carts">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/shopping-carts.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Shopping Carts</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">6 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/category-filters">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/category-filters.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Category Filters</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/product-quickviews">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/product-quickviews.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Product Quickviews</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">4 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/product-features">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/product-features.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Product Features</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">9 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/store-navigation">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/store-navigation.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Store Navigation</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/promo-sections">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/promo-sections.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Promo Sections</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">8 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/checkout-forms">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/checkout-forms.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Checkout Forms</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/reviews">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/reviews.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Reviews</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">4 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/order-summaries">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/order-summaries.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Order Summaries</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">4 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/order-history">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/order-history.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Order History</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">4 components</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/components/incentives">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/incentives.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Incentives</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">8 components</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                    <section class="relative mt-12" id="product-ecommerce-page-examples">
+                        <div
+                            class="max-[105rem]:line-y max-[105rem]:mx-4 max-[105rem]:mb-6 max-[105rem]:py-2 max-[105rem]:sm:mx-2">
+                            <h3
+                                class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">
+                                Page Examples</h3>
+                        </div>
+                        <ul
+                            class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-md:gap-x-5 lg:grid-cols-3 xl:grid-cols-4">
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/page-examples/storefront-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/storefront-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Storefront Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">4 examples</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/page-examples/product-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/product-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Product Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 examples</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/page-examples/category-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/category-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Category Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 examples</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/page-examples/shopping-cart-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/shopping-cart-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Shopping Cart Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">3 examples</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/page-examples/checkout-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/checkout-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Checkout Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 examples</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/page-examples/order-detail-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/order-detail-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Order Detail Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">3 examples</p>
+                                    </div>
+                                </a></li>
+                            <li
+                                class="max-sm:line-y sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                                <a class="block transition hover:bg-gray-950/2.5"
+                                    href="/ecommerce/page-examples/order-history-pages">
+                                    <div class="relative p-2"><img
+                                            src="https://tailwindcss.com/plus-assets/img/ui-blocks/ecommerce/order-history-pages.png"
+                                            class="aspect-[708/480] rounded-md outline outline-gray-950/10 sm:rounded-xl lg:rounded-xl"
+                                            width="708" height="480" alt=""></div>
+                                    <div class="px-4 py-2 sm:px-2">
+                                        <p class="text-sm/6 font-medium">Order History Pages</p>
+                                        <p class="font-mono text-xs/6 tracking-wide text-gray-600">5 examples</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+{{ end }}

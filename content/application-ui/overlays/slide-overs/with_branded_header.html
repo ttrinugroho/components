@@ -1,0 +1,59 @@
++++
+title = 'With Three Tiers'
++++
+<div class="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+  <!-- Background backdrop, show/hide based on slide-over state. -->
+  <div class="fixed inset-0"></div>
+
+  <div class="fixed inset-0 overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+        <!--
+          Slide-over panel, show/hide based on slide-over state.
+
+          Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+            From: "translate-x-full"
+            To: "translate-x-0"
+          Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+            From: "translate-x-0"
+            To: "translate-x-full"
+        -->
+        <div class="pointer-events-auto w-screen max-w-md">
+          <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+            <div class="bg-indigo-700 px-4 py-6 sm:px-6">
+              <div class="flex items-center justify-between">
+                <h2 class="text-base font-semibold leading-6 text-white" id="slide-over-title">Panel title</h2>
+                <div class="ml-3 flex h-7 items-center">
+                  <button type="button" class="rounded-md bg-indigo-700 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+                    <span class="sr-only">Close panel</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="mt-1">
+                <p class="text-sm text-indigo-300">Lorem, ipsum dolor sit amet consectetur adipisicing elit aliquam ad hic recusandae soluta.</p>
+              </div>
+            </div>
+            <div class="relative flex-1 px-4 py-6 sm:px-6">
+              <div class="sm:px-6 px-4 py-6 absolute inset-0">
+                <div class="opacity-75 border-gray-400 border-dashed border rounded-xl overflow-hidden relative h-full">
+                  <svg fill="none" class="absolute inset-0 size-full stroke-gray-900/10">
+                    <defs>
+                      <pattern x="0" y="0" id="pattern-b55d3ce5-d478-4029-95b9-44c415d04f63" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3"></path>
+                      </pattern>
+                    </defs>
+                    <rect fill="url(#pattern-b55d3ce5-d478-4029-95b9-44c415d04f63)" width="100%" height="100%" stroke="none"></rect>
+                  </svg>
+                </div>
+              </div>
+              <!-- Your content -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

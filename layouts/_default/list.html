@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{partial "header" .}}
+<main class="flex min-h-dvh flex-col pt-14">
+    <article class="py-2 px-14">
+        <h2 class="font-bold text-3xl mb-4">{{.Title}}</h2>
+        <p class="mb-2">
+            {{ .Content }}
+        </p>
+        <ul class="mt-4 grid gap-4">
+            {{ range .Pages -}}<li class="font-bold"><a href='{{ strings.TrimSuffix ".html" .RelPermalink }}' class="hover:underline">{{replace .File.ContentBaseName "_" " "}}</a></li>{{end}}
+        </ul>
+    </article>
+</main>
+{{ end }}

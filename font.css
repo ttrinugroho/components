@@ -1,0 +1,41 @@
+@font-face {
+    font-family: IBM Plex Mono;
+    src: url(https://tailwindcss.com/plus-assets/build/assets/IBMPlexMono-Regular-C-SBB-bw.woff2)format("woff2");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: IBM Plex Mono;
+    src: url(https://tailwindcss.com/plus-assets/build/assets/IBMPlexMono-Italic-DYZFG3Th.woff2)format("woff2");
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: IBM Plex Mono;
+    src: url(https://tailwindcss.com/plus-assets/build/assets/IBMPlexMono-Medium-B772pXP5.woff2)format("woff2");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: IBM Plex Mono;
+    src: url(https://tailwindcss.com/plus-assets/build/assets/IBMPlexMono-MediumItalic-DcUpDvfM.woff2)format("woff2");
+    font-weight: 500;
+    font-style: italic
+}
+
+@font-face {
+    font-family: IBM Plex Mono;
+    src: url(https://tailwindcss.com/plus-assets/build/assets/IBMPlexMono-SemiBold-DAxHeMPo.woff2)format("woff2");
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: IBM Plex Mono;
+    src: url(https://tailwindcss.com/plus-assets/build/assets/IBMPlexMono-SemiBold-DAxHeMPo.woff2)format("woff2");
+    font-weight: 600;
+    font-style: italic
+}
