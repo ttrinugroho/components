@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "hugo server",
+    "build": "hugo build"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.4",
     "@tailwindcss/forms": "^0.5.10",
+    "hugo-bin": "^0.144.1",
     "tailwindcss": "^4.1.4"
   }
 }
